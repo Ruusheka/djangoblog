@@ -1,0 +1,62 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div class="container " style="border:1px solid black; border-radius:40px; width:30%;">
+    <form action="" method='POST' enctype="multipart/form-data" align="center">
+        {% csrf_token %}
+        <div class="container">
+          <div class="text-center">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-4">
+                <h3>#PostUrBlog </h3>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+            <div class="form-group row">
+                <label class="col-sm-5 col-form-label">IMAGE:</label>
+                  <div class="col-sm-4">
+                   {{ form.image }}
+                  </div>
+              </div>
+            <div class="form-group row">
+              <label class="col-sm-5 col-form-label">TITLE:</label>
+                <div class="col-sm-4">
+                 {{ form.title }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-5 col-form-label">AUTHOR:</label>
+                  <div class="col-sm-4">
+                   {{ form.author }}
+                  </div>
+              </div>
+            <div class="form-group row">
+                <label class="col-sm-5 col-form-label">DESCRIPTION:</label>
+                  <div class="col-sm-4">
+                   {{ form.description }}
+                  </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-5 col-form-label">CAPTION:</label>
+                  <div class="col-sm-4">
+                   {{ form.caption }}
+                  </div>
+              </div>
+              <br>
+              
+        <input style="align:center;"class="btn btn-success" type="submit" name="Add">  <a href="{% url 'land' %}" class='btn btn-dark'>GoBack</a>
+      <br><br>
+     </form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item active">
+  <img src="{% static '/img/add.jpg' %}" class="img-fluid d-block w-100" alt="...">
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{%extends 'master.html'%}
+{% load static %}
+<html>
+    <head>
+        <title>
+            DJANGO Blogs 
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href=" {% static '/css/main.css' %} ">
+    </head>
+    <body>
+        {% block content %} 
+        <div style="background-image:url('{% static '/img/home.jpg' %}');background-repeat:no repeat;background-size:cover;justify-content:center;background-attachment: fixed;">
+        <br>
+        <div class="container">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-dark me-md-5" type="button"><a href="{% url 'addblog' %}" class='btn btn-dark'>Add Blog</a></button>
+            </div>
+            <br>
+        {%for b in blogs %}  
+        <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card mb-3" style="width: 30rem;">
+                        <img src="/media/{{b.image}}" class="img-fluid rounded-start" alt="">
+                        <div class="card-body">
+                        <h2 class="card-title">{{b.title}}</h2>
+                        <p class="card-text" style="font-family:'Courier New', Courier, monospace;">-{{b.author}}</p>
+                        <p class="card-text">{{b.description}}</p>
+                        <p class="card-text">#{{b.caption}}</p>
+                        <p class="card-text">Published on: {{b.date}}</p>
+                        <a href="/edit/{{ b.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>   <a href="/delete/{{ b.id }}">Delete</a>               
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <br>
+        {% endfor %}
+        </div>
+        {% endblock %}
+    </div>
+</body>

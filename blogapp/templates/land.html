@@ -1,0 +1,128 @@
+{%extends 'master.html'%}
+{% load static %}
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="{% static '/img/blog6.jpg' %}" class="img-fluid d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-black">
+                <h1>DJANGO <i class="fa-solid fa-heart" style="color:red;"></i> BLOGS...</h1>
+                <h5>Some representative placeholder content for the first slide.</h5>
+                <div class="d-grid gap-2 col-5 mx-auto">
+                    <button class="btn btn-warning me-md-5" type="button"><a href="{% url 'addblog' %}" class='btn btn-warning'><h2>Post a New Blog</h2></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+    <div class="about-section wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-5 col-md-12 text-sec">
+                    <h1 id="about">#whyUs?</h1><br>
+                    <h2 style="color:#000000">why should you choose DJANGO <i class="fa-solid fa-heart" style="color:red;"></i> BLOGS...</h2><br>
+                    <p style="color:black; font-size : 16px;">Create a beautiful blog that fits your style. Choose from a selection of easy-to-use templates – all with flexible layouts and hundreds of background images – or design something new.</p>
+                </div>
+                <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                    <img src="{% static '/img/about.jpg' %}"  style="padding-top: 26px; padding-bottom: 26px;  border-radius :70px; height: 500px; width:750px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="{% static '/img/joining.jpg' %}" class="img-fluid d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-black">
+                <h4 id="about">#JoinWithUs</h4><br>
+                <h1>DJANGO <i class="fa-solid fa-heart" style="color:red;"></i> BLOGS...</h1>
+                <h5>Whether sharing your expertise, breaking news, or whatever’s on your mind, you’re in good company on Blogger. Sign up to discover why millions of people have published their passions here.</h5>
+                <div class="d-grid gap-2 col-3 mx-auto">
+                    <button class="btn btn-info me-md-2" type="button"><a href="{% url 'addblog' %}" class='btn btn-info'><h5>Post Now</h5></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--********************************************************************************************************************************************-->
+    <footer class="bg-dark text-white pt-5 pt-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-container text-md-left">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                  <img src="{% static '/img/banner.gif' %}" alt="Bootstrap" width="200" height="200">
+                </a>
+                <br><br>
+                <h6 style="color:#ffd700; font-size:18px;">DJANGO <i class="fa-solid fa-heart" style="color:red;"></i> BLOGS...</h6><br><br>
+              </div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">#CommentUs</h5>
+              <p>Help users stay organized by sending reminders for upcoming events,bill payment reminders, or subscription renewals.</p>
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="CmdNow..." aria-label="Search">
+                  <button class="btn btn-outline-warning bg-warning text-black" type="submit">GO</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">#UsefulLinks</h5>
+              <p >
+                <a href="#"  class="text-white" style="text-decoration: none;">UrAccount</a>
+              </p>
+              <p >
+                <a href="#"  class="text-white" style="text-decoration: none;">NewLogin</a>
+              </p>
+              <p>
+                <a href="#"  class="text-white" style="text-decoration: none;">PostedBlogs</a>
+              </p>
+              <p>
+                <a href="#"  class="text-white" style="text-decoration: none;">WhyUs</a>
+              </p>
+              <p>
+                <a href="#"  class="text-white" style="text-decoration: none;">JoinUs</a>
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">#Help</h5>
+                <p>
+                  <a href="#"  class="text-white" style="text-decoration: none;">Help Center</a>
+                </p>
+                <p>
+                  <a href="#"  class="text-white" style="text-decoration: none;">Hire a Professional</a>
+                </p>
+                <p >
+                  <a href="#"  class="text-white" style="text-decoration: none;">Report Abuse</a>
+                </p>
+                <p>
+                  <a href="#"  class="text-white" style="text-decoration: none;">System Status</a>
+                </p>
+                <p>
+                  <a href="#"  class="text-white" style="text-decoration: none;">Customer Service</a>
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">#ContactUs</h5>
+              <p style="text-align: left;">
+                <i class="fa-solid fa-location-dot mr-3" style="color: #ffd700; padding-left: 10px;"></i> 49 Featherstone Street,London,UK
+              </p>
+              <p style="text-align: left;">
+                <i class="fa-solid fa-envelope"  style="color: #ffd700; padding-left: 10px;"></i> dblog@gmail.com
+              </p>
+              <p style="text-align: left;">
+                <i class="fa-solid fa-phone-volume" style="color: #ffd700; padding-left: 10px;"></i> +99 1234567890
+              </p>
+              <p >
+              <i style="color:#ffd700; padding-left: 15px;" class="fa-brands fa-facebook-f"></i>
+              <i style="color:#ffd700; padding-left: 15px;" class="fa-brands fa-instagram"></i>
+              <i style="color:#ffd700; padding-left: 15px;" class="fa-brands fa-twitter"></i>
+              <i style="color:#ffd700; padding-left: 15px;" class="fa-brands fa-pinterest-p"></i>
+            </p>
+          </div>
+          
+        </div>
+      
+      </footer>
+{% endblock %}
