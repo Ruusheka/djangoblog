@@ -25,4 +25,5 @@
 * Database Handling – The Django ORM manages storing and retrieving blog data.
 * Admin Panel – Superusers can create, edit, and delete blog posts from the Django admin interface.
 * Templates – HTML templates dynamically display blog posts with images and timestamps.
-![Screenshot 2025-02-24 211112](https://github.com/user-attachments/assets/73129110-22e5-4174-aa92-a5c1e5ab86f8)
+![Screenshot 2025-02-24 211112](https://github.com/user-attachments/assets/05383b59-a103-4fc3-9e64-bcffc2202578)
+
